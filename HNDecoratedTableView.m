@@ -14,6 +14,7 @@
 @synthesize separatorColor = separatorColor_;
 @synthesize separatorOffsetRight = separatorOffsetRight_;
 @synthesize separatorOffsetLeft = separatorOffsetLeft_;
+@synthesize separatorHeight = separatorHeight_;
 
 -(id)init {
     self = [super init];
@@ -88,10 +89,8 @@
 #pragma mark Private
 
 -(void)initialize {
-    self.separatorColor = [UIColor colorWithRed:196.0 / 255.0
-                                          green:196.0 / 255.0
-                                           blue:196.0 / 255.0
-                                          alpha:1.0];
+    self.separatorColor = [UIColor clearColor];
+    self.separatorHeight = 1.0;
     self.separatorOffsetRight = 0.0;
     self.separatorOffsetLeft = 0.0;
 }
@@ -188,10 +187,10 @@
 
     UIView* separatorView = [[UIView alloc] init];
     separatorView.backgroundColor = self.separatorColor;
-    separatorView.frame = CGRectMake(0.0,
-                                     cell.backgroundView.frame.size.height - 1.0,
+    separatorView.frame = CGRectMake(self.separatorOffsetLeft,
+                                     cell.backgroundView.frame.size.height - self.separatorHeight,
                                      width,
-                                     1.0);
+                                     self.separatorHeight);
 
     return [separatorView autorelease];
 }
