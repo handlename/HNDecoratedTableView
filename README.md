@@ -2,5 +2,6 @@
 2. Call "setBackgroundImage:withInsets:forCell:forRowAtIndexPath:"
    in "tableView:willDisplayCell:forRowAtIndexPath:".
 
-Demo project will be prepared later.
+Please read code in sample project to learn how to use it.
+
 Thanks.
