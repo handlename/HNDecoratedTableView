@@ -1,6 +1,6 @@
 #import <UIKit/UIKit.h>
 
-@interface HNDesignedTableView : UITableView
+@interface HNDecoratedTableView : UITableView
 
 @property (nonatomic, retain) UIColor* separatorColor;
 @property (nonatomic, assign) CGFloat separatorOffsetRight;

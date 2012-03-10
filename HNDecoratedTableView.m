@@ -1,6 +1,6 @@
-#import "HNDesignedTableView.h"
+#import "HNDecoratedTableView.h"
 
-@interface HNDesignedTableView ()
+@interface HNDecoratedTableView ()
 -(void)initialize;
 +(UIImage*)resizableImageWithCapInsets:(UIEdgeInsets)insets forImage:(UIImage*)image;
 +(UIImage*)cropImage:(UIImage*)image toRect:(CGRect)rect;
@@ -9,7 +9,7 @@
 -(UIView*)makeSeparatorViewForCell:(UITableViewCell*)cell;
 @end
 
-@implementation HNDesignedTableView
+@implementation HNDecoratedTableView
 
 @synthesize separatorColor = separatorColor_;
 @synthesize separatorOffsetRight = separatorOffsetRight_;
@@ -175,8 +175,8 @@
         resizeInsets = UIEdgeInsetsMake(0.0, insets.left, 0.0, insets.right);
     }
 
-    image = [HNDesignedTableView cropImage:image toRect:cropRect];
-    image = [HNDesignedTableView resizableImageWithCapInsets:resizeInsets forImage:image];
+    image = [HNDecoratedTableView cropImage:image toRect:cropRect];
+    image = [HNDecoratedTableView resizableImageWithCapInsets:resizeInsets forImage:image];
 
     return image;
 }
